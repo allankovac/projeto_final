@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'clientes'
+    'clientes',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'gestao_clientes.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -121,4 +122,8 @@ USE_TZ = True
 MEDIA_ROOR = 'media'
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
+LOGIN_URl = '/login/'
+LOGIN_REDIRECT_URL = 'person_list'
+LOGOUT_REDIRECT_URL = 'login'
+
 
